@@ -19,16 +19,16 @@ function NoMatch() {
 function App() {
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
+      <nav className='w-full flex flex-row px-16 justify-end header-hight'>
+        <ul className=' flex flex-row h-full items-center'>
+          <li className='mx-3'>
             <Link to="/">Inicio</Link>
           </li>
       
-          <li>
+          <li className='mx-3'>
             <Link to="/product-list">Tienda</Link>
           </li>
-          <li>
+          <li className='mx-3'>
             <Link to="/product-crud">Gestionar productos</Link>
           </li>
         </ul>
