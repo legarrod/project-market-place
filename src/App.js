@@ -22,14 +22,21 @@ function NoMatch() {
 function App() {
   return (
     <div>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
-        rel="stylesheet"
-      />
-      <Header />
- 
+      <nav className='w-full flex flex-row px-16 justify-end header-hight'>
+        <ul className=' flex flex-row h-full items-center'>
+          <li className='mx-3'>
+            <Link to="/">Inicio</Link>
+          </li>
+      
+          <li className='mx-3'>
+            <Link to="/product-list">Tienda</Link>
+          </li>
+          <li className='mx-3'>
+            <Link to="/product-crud">Gestionar productos</Link>
+          </li>
+        </ul>
+      </nav>
+
       <hr />
       <div className="body-rou">
         <Routes>
