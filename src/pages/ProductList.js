@@ -3,6 +3,7 @@ import icono2 from "../assets/img/Frutas y Verduras.jpg";
 import icono3 from "../assets/img/Carnes.jpg";
 import icono4 from "../assets/img/Lacteos y Granos.jpg";
 import icono5 from "../assets/img/Licores.jpg";
+import {  Link } from "react-router-dom";
 
 function ProductList() {
   return (
@@ -48,14 +49,16 @@ function ProductList() {
             key={index}
             className="h-80 border border-gray-light w-56 my-3 mx-3 p-2"
           >
-            <img
-              src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-              className="flex flex-row justify-center image-cart mx-20 my-5"
-            />
-            <p className="font-bold text-2xl my-2 ml-2">Lorem ipsum</p>
-            <p className=" font-bold text-primary text-xl my-2 ml-2">$100</p>
-            <p className="text-lg my-2 ml-2">lorem ipsum</p>
+            <Link to='/product?manzana' >
+              <img
+                src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                className="flex flex-row justify-center image-cart mx-20 my-5"
+              />
+              <p className="font-bold text-2xl my-2 ml-2">Lorem ipsum</p>
+              <p className=" font-bold text-primary text-xl my-2 ml-2">$100</p>
+              <p className="text-lg my-2 ml-2">lorem ipsum</p>
+            </Link>
             <button className="flex flex-column items-center bg-primary rounded px-3 py-1 m-4 ml-14 text-terciary text-lg">
               Comprar
             </button>
