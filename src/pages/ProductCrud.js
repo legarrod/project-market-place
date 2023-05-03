@@ -173,7 +173,7 @@ function ProductCrud() {
                   className="img-products-list"
                 />
                 <p className="font-medium text-lg">{item.product_name}</p>
-                <p className="ml-5 text-base truncate">{item.description}</p>
+                <p className="ml-5 text-base text-truncate-custom">{item.description}</p>
               </div>
 
               <div className="flex flex-row items-center">

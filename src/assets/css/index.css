@@ -116,7 +116,7 @@ cursor: pointer;
   height: 400px;
   width: 400px;
   object-fit: cover;
- background-image: url(https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+ /* background-image: url(https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) */
 }
 .parent:hover .child {
   -ms-transform: scale(1.2);
@@ -143,6 +143,18 @@ cursor: pointer;
 
 }
 
+.text-truncate-custom{
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  padding: 20px;
+  font-size: 1.3rem;
+  margin: 0;
+  background: white;
+  resize: horizontal;
+}
 
 @tailwind base;
 @tailwind components;

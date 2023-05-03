@@ -12,12 +12,12 @@ function ProductList() {
   const [loading, setLoading] = useState(true);
   const [productList, setproductList] = useState([]);
   const [categoryId, setCategoryId] = useState("");
+
   async function getProducts() {
     try {
       const { data } = await axios.get(
         "http://localhost:3002/api/v1/products/all"
       );
-      console.log(data);
       setproductList(data);
       setLoading(false);
     } catch (error) {
@@ -38,6 +38,9 @@ function ProductList() {
     ? productList.filter((item) => item.category_id === categoryId)
     : productList;
 
+    const fnReplace = (item)=>{
+return item.replaceAll(" ", "-")
+}
   return (
     <section className="bg-gray-background">
       <div className="flex flex-wrap justify-between w-full">
@@ -92,9 +95,9 @@ function ProductList() {
         {productList.map((item) => (
           <div
             key={item.product_name}
-            className="h-80 border border-gray-light w-56 my-3 mx-3 p-2"
+            className="h-96 border border-gray-light w-56 my-3 mx-3 p-2"
           >
-            <Link to="/product?manzana">
+            <Link to={`/product?${fnReplace(item.product_name)}`}>
               <img
                 src={item.product_image || notImg}
                 alt=""
@@ -106,7 +109,7 @@ function ProductList() {
               <p className=" font-bold text-primary text-xl my-2 ml-2">
                 {item.product_price}
               </p>
-              <p className="text-lg my-2 ml-2">{item.description}</p>
+              <p className="text-lg my-2 ml-2 text-truncate-custom">{item.description}</p>
             </Link>
             <button className="flex flex-column items-center bg-primary rounded px-3 py-1 m-4 ml-14 text-terciary text-lg">
               Comprar
